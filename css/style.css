@@ -8,12 +8,6 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.container::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -31,7 +25,19 @@ header{
 
 section{
     width: 1200px;
-    margin: 0px auto 100px;
+    margin: 0px auto 200px;
+    position: relative;
+}
+
+main{
+    background: url(../img/wave.svg) 50% 50%;
+    background-repeat: repeat-y;
+    background-size: 100% 65%;
+}
+
+footer{
+    background-color: rgb(16, 18, 43);
+    color: white;
 }
 
 .button{
@@ -46,9 +52,16 @@ section{
 }
 
 .img{
-    width: 75%;
     display: inline-block;
     vertical-align: middle;
+}
+
+.right{
+    margin-left: 250px;
+}
+
+.left{
+    margin-right: 250px;
 }
 
 .text{
@@ -57,10 +70,17 @@ section{
     vertical-align: middle;
 }
 
-.text p{
+p{
     line-height: 25px;
     margin: 20px 0;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*------------------------------------------*/
 
 nav{
     text-align: center;
@@ -86,22 +106,17 @@ nav{
     vertical-align: middle;
 }
 
-.ul{
+header .ul{
     position: absolute;
     top: 30px;
     left: 50%;
     list-style: none;
 }
 
-li{
+header li{
     display: inline-block;
     padding: 0px 10px;
     font-weight: bold;
-}
-
-a{
-    text-decoration: none;
-    color: white;
 }
 
 .small{
@@ -123,7 +138,86 @@ a{
     margin-left: 15px;
 }
 
+.blue{
+    background-color: lightskyblue;
+    color: white;
+    border: lightskyblue;
+}
+
 .jumbotron-text{
     margin: 20px 0 15px 0;
     line-height: 25px;
+}
+
+.last-section{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.last-section div:first-child{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.last-section div:nth-child(3){
+    width: 50%;
+    margin: 0 auto;
+    background: url(../img/stars.svg);
+    background-size: cover;
+}
+
+.last-section div:last-child{
+    margin: 25px auto 100px;
+}
+
+footer::after{
+    contain: "";
+    display: table;
+    clear: both;
+}
+
+footer section{
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 350px;
+    border-bottom: darkslateblue 1px solid;
+}
+
+footer div:first-child{
+    width: 30%;
+}
+
+footer section div{
+    display: inline-block;
+    float: left;
+    width: 17%;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li{
+    line-height: 25px;
+}
+
+footer h4, h2{
+    color: darkslateblue;
+}
+
+.flag{
+    width: 20px;
+}
+
+footer nav{
+    width: 1200px;
+    margin: 50px auto;
+    position: relative;
+}
+
+footer nav img{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
